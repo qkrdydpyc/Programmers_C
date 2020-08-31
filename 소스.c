@@ -5,6 +5,7 @@
 char* solution(int a, int b) {
     int month[12] = { 31,29,31,30,31,30,31,31,30,31,30,31 };
     char* day[] = { "FRI","SAT","SUN","MON","TUE","WED","THU" };
+    //1ê¸ˆ2í† 3ì¼4ì›”5í™”6ìˆ˜7ëª©8ê¸ˆ
     int c = 0;
     char* answer = (char*)malloc(sizeof(day));
     for (int i = 0; i < a-1; i++)
@@ -12,9 +13,6 @@ char* solution(int a, int b) {
         c += month[i];
     }
     c = c + b-1;
-    /*
-    1±İ2Åä3ÀÏ4¿ù5È­6¼ö7¸ñ8±İ
-    */
     int tmp;
     tmp = c % 7;
     answer = day[tmp];
