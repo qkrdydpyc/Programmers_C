@@ -10,16 +10,18 @@ char* solution(const char* s) {
     int tmp = 0;   //홀수라면 가운데 1자리 짝수라면 가운데 2자리를 입력하기 위한 변수
     tmp = strlen(s) / 2;
     // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
-
+    // abcde	c   tmp 2
+    // qwer	    we  tmp 2
+    //
     char* answer = (char*)malloc(sizeof(s));
     if (check == 1)
     {
-        answer[0] = s[tmp];
+        answer[0] = s[tmp]; // 0에서 시작하기 때문에 +1을 하지 않음
         
     }
     else
     {
-        answer[0] = s[tmp-1];
+        answer[0] = s[tmp-1]; //배열은 0에서 시작하기 때문에 -1
         answer[1] = s[tmp];
     }
     return answer;
